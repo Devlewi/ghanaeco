@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.nigeria-eco.com
+
+# Sitemaps
+Sitemap: https://www.nigeria-eco.com/sitemap.xml
