@@ -163,7 +163,7 @@ const FifthSectionComponent: React.FC<FifthSectionProps> = ({
                     <div className="loops-mixed">
                     {ideasOpinions.length === 0 ? (
     <div className="text-left text-gray-500 py-0">
-      Aucun article disponible pour le moment.
+      No items are available at this time.
       <br/>
       <br/>
       <br/>
