@@ -20,7 +20,7 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({ locale, singulararticle, po
   const encodedURL = encodeURIComponent(
     `${baseUrl}/${locale}/${singulararticle}/${post.slug}`
   );
-//https://siteco.cynomedia-africa.com/wp-json/custom/v1/featuredvideo/
+
   return (
     <div className="flex items-center gap-3 mb-6">
       <Link

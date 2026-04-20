@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://www.nigeria-eco.com
+Host: https://www.ghana-eco.com
 
 # Sitemaps
-Sitemap: https://www.nigeria-eco.com/sitemap.xml
+Sitemap: https://www.ghana-eco.com/sitemap.xml

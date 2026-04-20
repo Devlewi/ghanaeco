@@ -21,32 +21,45 @@ type Props = {
 
 // ✅ Meta avec Promise pour params
 export async function generateMetadata({ params }: Props) {
-
   const { locale, slug } = await params;
 
   try {
-    
     const post = await fetchPostMeta(slug, locale);
     if (!post) return {};
+
+    // On nettoie l'extrait pour enlever les balises <p> et autres HTML
+    const cleanDescription = he.decode(post.excerpt).replace(/<[^>]*>?/gm, "").trim();
+    
+    // On force l'URL vers le site public (Frontend)
+    const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL || "https://www.ghana-eco.com";
+    const frontendUrl = `${baseUrl}/${locale}/post/${slug}`;
+
     return {
       title: he.decode(post.title),
-      description: he.decode(post.excerpt),
+      description: cleanDescription,
+      alternates: {
+        canonical: frontendUrl,
+      },
       openGraph: {
         title: he.decode(post.title),
-        description: he.decode(post.excerpt),
+        description: cleanDescription,
         images: [post.featured_image],
-        url: he.decode(post.link),
+        url: frontendUrl, // Correction ici : ne plus utiliser post.link
         type: "article",
+        siteName: "GHANA-ECO",
       },
       twitter: {
         card: "summary_large_image",
         title: he.decode(post.title),
-        description: he.decode(post.excerpt),
+        description: cleanDescription,
         images: [post.featured_image],
       },
     };
-  } catch {
-    return {};
+  } catch (error) {
+    console.error("Metadata error:", error);
+    return {
+      title: "GHANA-ECO",
+    };
   }
 }
 
