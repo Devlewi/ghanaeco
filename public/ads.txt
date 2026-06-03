@@ -1,15 +1,9 @@
 google.com, pub-9760088965124508, DIRECT, f08c47fec0942fa0
-
 taboola.com, 1272514, DIRECT, c228e6794e811952
 smartadserver.com, 3563, RESELLER
 beachfront.com, 13749, RESELLER, e2541279e8e2ca4d
 advertising.com, 28458, RESELLER
 admanmedia.com, 556, RESELLER 
-
-
-
-
-
 OWNERDOMAIN=people237.com
 MANAGERDOMAIN=themoneytizer.com
 themoneytizer.com,5637,DIRECT
@@ -1292,10 +1286,3 @@ google.com, pub-4903453974745530, RESELLER, f08c47fec0942fa0
 richaudience.com, lDF5XleM05, DIRECT
 indexexchange.com, 194273, DIRECT, 50b1c356f2c5c8fc
 media.net, 8CU5DERG1, DIRECT
-
-
-
-
-
-
-

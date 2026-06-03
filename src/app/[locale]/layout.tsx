@@ -44,20 +44,22 @@ export default async function RootLayout(props: Props) {
           crossOrigin="anonymous"
         />
 
-{/*
-<Script
-    id="adsense-init"
-    strategy="afterInteractive"
-    dangerouslySetInnerHTML={{
-      __html: `
-        (adsbygoogle = window.adsbygoogle || []).push({
-          google_ad_client: "ca-pub-9760088965124508",
-          enable_page_level_ads: true
-        });
-      `,
-    }}
-  />
-*/}
+
+
+        {/* Google Analytics - Chargement avec la stratégie Next.js */}
+              <Script
+                 strategy="afterInteractive"
+                 src="https://www.googletagmanager.com/gtag/js?id=G-R8ENRJRN9B"
+               />
+       
+               <Script id="google-analytics" strategy="afterInteractive">
+                 {`
+                   window.dataLayer = window.dataLayer || [];
+                   function gtag(){dataLayer.push(arguments);}
+                   gtag('js', new Date());
+                   gtag('config', 'G-R8ENRJRN9B');
+                 `}
+               </Script>        
 
 
 
@@ -482,23 +484,7 @@ export default async function RootLayout(props: Props) {
           </Script>
         </IntlProvider>
       
-       {/* Google Analytics - Script async */}
-       <Script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-6G7NCZPPCJ"
-        />
-
-        {/* Google Analytics - Initialisation */}
-        <Script id="google-analytics">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-6G7NCZPPCJ', {
-              page_path: window.location.pathname,
-            });
-          `}
-        </Script>
+     
       </body>
     </html>
   );

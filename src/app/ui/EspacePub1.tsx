@@ -46,9 +46,9 @@ const EspacePub1: React.FC = () => {
           */}
           {isMobile ? (
             <iframe
-              id="aa9b8ba7"
-              name="aa9b8ba7"
-              src={`https://adserver.cynomedia.com/www/delivery/afr.php?zoneid=264111111&cb=${cb}`}
+              id="a9c2c4b3"
+              name="a9c2c4b3"
+              src={`https://adserver.cynomedia.com/www/delivery/afr.php?zoneid=306&cb=${cb}`}
               frameBorder="0"
               scrolling="no"
               width="336"
@@ -58,9 +58,9 @@ const EspacePub1: React.FC = () => {
             ></iframe>
           ) : (
             <iframe
-              id="aa4f34dc"
-              name="aa4f34dc"
-              src={`https://adserver.cynomedia.com/www/delivery/afr.php?zoneid=263111111&cb=${cb}`}
+              id="a61e6660"
+              name="a61e6660"
+              src={`https://adserver.cynomedia.com/www/delivery/afr.php?zoneid=307&cb=${cb}`}
               frameBorder="0"
               scrolling="no"
               width="970"
