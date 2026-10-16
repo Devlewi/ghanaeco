@@ -1,6 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 import { notFound } from "next/navigation";
-import { FaAngleDoubleRight, FaHandPointRight, FaImage } from "react-icons/fa";
+import { FaAngleDoubleRight, FaHandPointRight, FaImage,  
+  FaLinkedin,
+  FaWhatsapp, } from "react-icons/fa";
 import Link from "next/link";
 import ShareButtons from "@/app/ui/ShareButtons";
 import ThreeLastPostSimilComponent from "@/app/ui/ThreeLastPostSimilComponent";
@@ -180,20 +182,38 @@ export default async function PostPage({ params }: Props) {
                     : "",
                 }}
               />
-              <br />
-              <div className="text-sm flex items-center">
-                <FaHandPointRight className="text-gray-500 mr-1" />
-                <a
-                  href={`${whatsappLink}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[#db2e44] no-underline hover:underline font-semibold"
-                >
-                  {locale === "en"
-                    ? "Follow the live information on our WHATSAPP channel"
-                    : "Suivez l'information en direct sur notre chaîne WHATSAPP"}
-                </a>
-              </div>
+              <br/>
+<div className="flex flex-col gap-3 mt-2">
+  <div className="text-sm flex items-center">
+    <FaHandPointRight className="text-gray-500 mr-1 shrink-0" />
+    <FaWhatsapp className="text-[#25D366] mr-2 shrink-0" size={16} />
+    <a
+      href={`${whatsappLink}`}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-[#db2e44] no-underline hover:underline font-semibold"
+    >
+      {locale === "en"
+        ? "Follow the live information on our WHATSAPP channel"
+        : "Suivez l'information en direct sur notre chaîne WHATSAPP"}
+    </a>
+  </div>
+
+  <div className="text-sm flex items-center">
+    <FaHandPointRight className="text-gray-500 mr-1 shrink-0" />
+    <FaLinkedin className="text-[#0A66C2] mr-2 shrink-0" size={16} />
+    <a
+      href={process.env.NEXT_PUBLIC_LINKEDIN_URL}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-[#0A66C2] no-underline hover:underline font-semibold"
+    >
+      {locale === "en"
+        ? "Follow our content on our LinkedIn page"
+        : "Suivez nos contenus sur notre page LinkedIn"}
+    </a>
+  </div>
+</div>
             </article>
             <br />
             <br />
