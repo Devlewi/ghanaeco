@@ -13,6 +13,7 @@ import NinthSectionComponent from "../ui/NinthSectionComponent";
 import EspacePub2 from "../ui/EspacePub2";
 //import PubReportageSectionComponent from "../ui/PubReportageSectionComponent";
 import BrandSectionComponent from "../ui/BrandSectionComponent";
+import NetworkNewsSectionComponent from "../ui/NetworkNewsComponent";
 //import { getTranslation } from "../utils/i18n";
 
 
@@ -209,7 +210,7 @@ export default async function Home({ params }: Props) {
             dataPost={latestPubliciteReportage}/>
           */}
 
-
+          <NetworkNewsSectionComponent locale={locale}/>
           {/* section 12 : */}
           <NinthSectionComponent/>
         </div>
