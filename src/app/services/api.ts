@@ -10,6 +10,7 @@ type Post = {
     date_published: string;
     photo_credit: string;
     author: string;
+    auteur_personnalise: string;
     views: string;
     categories: string[];
     latest_articles: [];

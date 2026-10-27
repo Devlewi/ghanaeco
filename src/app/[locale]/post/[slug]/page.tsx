@@ -122,14 +122,14 @@ export default async function PostPage({ params }: Props) {
               <h1 className="text-4xl font-bold mb-4">{decode(post.title)}</h1>
 
               <p className="text-sm text-gray-500 mb-4">
-                {publishedBy} {he.decode(post.author)} {publishedByOn}{" "}
-                {new Date(post.date_published).toLocaleDateString(locale, {
-                  day: "numeric",
-                  month: "long",
-                  year: "numeric",
-                })}{" "}
-                - {post.views} {view}
-              </p>
+  {publishedBy} {he.decode(post.auteur_personnalise || post.author)} {publishedByOn}{" "}
+  {new Date(post.date_published).toLocaleDateString(locale, {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  })}{" "}
+  - {post.views} {view}
+</p>
 
               <ShareButtons
                 locale={locale}
